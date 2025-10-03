@@ -5,6 +5,15 @@ body {
     text-align: center;
 }
 
+body.dark {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark h2 {
+    color: #006EB6;
+}
+
 h1 {
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -12,13 +21,14 @@ h1 {
 }
 
 h2 {
-    font-size: 1.2em;
+    font-size: 1em;
     color: #006EB6;
     margin-top: 0;
     padding-bottom: 5px;
     border-bottom: 2px solid rgba(0, 0, 0, 0.3);
     display: inline-block;
     width: 75%;
+    text-transform: uppercase;
 }
 
 main {
@@ -51,5 +61,5 @@ footer img {
     border: 2px solid black;
     padding: 20px;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 2em auto;
 }
