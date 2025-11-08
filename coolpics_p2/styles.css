@@ -1,0 +1,14 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 1rem;
+}
+
+.hide {
+    display: none;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
