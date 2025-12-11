@@ -30,7 +30,7 @@ function viewerTemplate(pic, words) {
 }
 
 function openViewer(img) {
-  var src = img.src;
+  var src = img.getAttribute('src');
   var alt = img.alt;
   
   var parts = src.split('-');
