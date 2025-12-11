@@ -33,10 +33,7 @@ function openViewer(img) {
   var src = img.getAttribute('src');
   var alt = img.alt;
   
-  var parts = src.split('-');
-  var firstPart = parts[0];
-  var lastPart = parts[parts.length - 1];
-  var fullSrc = firstPart + '-full.' + lastPart.split('.')[1];
+  var fullSrc = src.replace('-sm', '-full');
 
   var dialog = document.createElement('dialog');
   dialog.innerHTML = viewerTemplate(fullSrc, alt);
