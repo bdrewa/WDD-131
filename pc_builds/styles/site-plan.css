@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap');
+
+:root {
+  --primary-color: #000000;
+  --secondary-color: #FFFFFF;
+  --accent1-color: #FF4C4C;
+  --accent2-color: #FFC0CB;
+
+  --heading-font: 'Orbitron', sans-serif;
+  --paragraph-font: 'Roboto', sans-serif;
+
+  --headline-color: var(--accent1-color);
+  --paragraph-color: #222;
+
+  --nav-link-color: var(--primary-color);
+  --nav-background-color: var(--accent2-color);
+  --nav-hover-link-color: var(--secondary-color);
+  --nav-hover-background-color: var(--accent1-color);
+}
+
+h1, h2, h3, h4, h5, h6, .heading {
+  font-family: var(--heading-font);
+}
+
+p, .paragraph {
+  font-family: var(--paragraph-font);
+}
+
+body {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2em;
+  font-family: var(--paragraph-font);
+  font-size: 18px;
+  text-align: center;
+  background-color: var(--secondary-color);
+  color: var(--paragraph-color);
+}
+
+header {
+  padding: 1em;
+  text-align: center;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+header h1, header h2 {
+  margin: 0.3em 0;
+  font-family: var(--heading-font);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--headline-color);
+}
+
+h2 {
+  margin-top: 1em;
+}
+
+p {
+  font-family: var(--paragraph-font);
+  line-height: 1.6em;
+  margin: 1em 0;
+}
+
+p.colored {
+  background-color: var(--accent1-color);
+  color: var(--secondary-color);
+  padding: 1em;
+  border-radius: 5px;
+}
+
+img {
+  display: block;
+  margin: 1em auto;
+  max-width: 300px;
+}
+
+hr {
+  height: 3px;
+  margin: 35px 0;
+  background: var(--accent1-color);
+  border: none;
+}
+
+nav {
+  background-color: var(--nav-background-color);
+  display: flex;
+  justify-content: center;
+  margin: 1em 0;
+}
+
+nav a {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: var(--nav-link-color);
+  font-family: var(--paragraph-font);
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-hover-background-color);
+  border-radius: 5px;
+}
+
+.colors {
+  width: 100%;
+  max-width: 600px;
+  margin: 30px auto;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.colors th, .colors td {
+  padding: 0.5em;
+  border: 1px solid #999;
+}
+
+.colors td {
+  height: 3em;
+  color: #222;
+}
+
+.primary { background-color: var(--primary-color); color: var(--secondary-color);}
+.secondary { background-color: var(--secondary-color);}
+.accent1 { background-color: var(--accent1-color);}
+.accent2 { background-color: var(--accent2-color);}
+
+.sitemap {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(6, 15%);
+  grid-template-rows: 3em 1.5em 1.5em 3em;
+  grid-template-areas: ". . home home . ."
+    ". . . top . ."
+    ". left left right right ."
+    "page2 page2 . . page3 page3";
+}
+
+.sitemap > div {
+  text-align: center;
+}
+
+.sm-home { 
+  grid-area: home; 
+  background-color: #ccc;
+  line-height: 3em;
+}
+.sm-page2 { 
+  grid-area: page2; 
+  background-color: #ccc;
+  line-height: 3em;
+}
+.sm-page3 { 
+  grid-area: page3; 
+  background-color: #ccc;
+  line-height: 3em;
+}
+.top { 
+  grid-area: top; 
+  border-left: 1px solid #999; 
+}
+.left { 
+  grid-area: left; 
+  border-top: 1px solid #999; 
+  border-left: 1px solid #999; 
+}
+.right { 
+  grid-area: right; 
+  border-top: 1px solid #999; 
+  border-right: 1px solid #999; 
+}
