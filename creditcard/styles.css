@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e8ecef;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    width: 100%;
+    max-width: 420px;
+}
+
+.card-front,
+.card-back {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    min-height: 250px;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-front {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    color: white;
+}
+
+.card-back {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    z-index: 1;
+    transform: translateY(40px);
+    display: grid;
+    grid-template-rows: 50px auto;
+    gap: 25px;
+    padding-top: 0;
+}
+
+.card-number-group {
+    grid-column: 1 / -1;
+    grid-row: 1;
+}
+
+.cardholder-group {
+    grid-column: 1 / 2;
+    grid-row: 2;
+}
+
+.expiry-group {
+    grid-column: 2 / 3;
+    grid-row: 2;
+}
+
+.card-front label {
+    display: block;
+    font-size: 11px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+.card-front input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.95);
+    transition: all 0.3s;
+}
+
+.card-front input:focus {
+    outline: none;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.magnetic-strip {
+    grid-row: 1;
+    background-color: #2c2c2c;
+    height: 50px;
+    margin: 0 -25px;
+}
+
+.cvv-group {
+    grid-row: 2;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    width: 50%;
+}
+
+.cvv-group label {
+    display: block;
+    font-size: 11px;
+    color: #666;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cvv-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.cvv-group input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+button {
+    grid-row: 2;
+    margin-top: 40px;
+    padding: 15px 30px;
+    background-color: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+button:hover {
+    background-color: #5568d3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+input::placeholder {
+    color: #999;
+    opacity: 0.7;
+}
+
+.card-image {
+    grid-column: 2;
+    justify-self: end;
+    align-self: start;
+}
+
+@media (max-width: 480px) {
+    .card-front,
+    .card-back {
+        min-height: 220px;
+        padding: 20px;
+    }
+    
+    .cvv-group {
+        width: 70%;
+    }
+}
